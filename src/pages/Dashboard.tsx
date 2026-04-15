@@ -229,7 +229,7 @@ const Dashboard = () => {
   const modules = [
     {
       number: 1,
-      title: 'PRP RECONQUISTA',
+      title: 'MRD RECONQUISTA',
       description: 'Aprende los fundamentos de la reconquista en 7 lecciones prácticas y efectivas.',
       isUnlocked: true,
       progress: user.modulo_1_progreso,
