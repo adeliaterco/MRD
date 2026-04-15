@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, ArrowRight, Check, Heart } from 'lucide-react';
+import { Mail, ArrowRight, Check, Heart, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { createUser, getUser, isOnboardingComplete } from '@/lib/storage';
 import Footer from '@/components/Footer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email.trim()) return;
+    if (!email.trim() || !password.trim()) return;
     
     setIsLoading(true);
     
@@ -81,6 +82,24 @@ const Login = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="tu@email.com"
+                      className="input-premium pl-12"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2" htmlFor="password">
+                    Tu Contraseña
+                  </label>
+                  <div className="relative">
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                    <input
+                      id="password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Ingresa tu contraseña"
                       className="input-premium pl-12"
                       required
                     />
