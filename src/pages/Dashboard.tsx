@@ -25,7 +25,7 @@ const HOTMART_LINKS = {
 const ModulePurchaseModal = ({ isOpen, onClose, moduleNumber, title, description, price }: ModulePurchaseModalProps) => {
   if (!isOpen) return null;
 
-  const handlePurchase = ("https://pay.hotmart.com/E105443779U?off=wt602mgu") => {
+  const handlePurchase = () => {
     window.open(HOTMART_LINKS[moduleNumber], '_blank');
   };
 

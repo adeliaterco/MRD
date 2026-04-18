@@ -21,7 +21,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
     }, 2000);
   };
 
-  const handlePurchase = ("https://pay.hotmart.com/E105443779U?off=wt602mgu") => {
+  const handlePurchase = () => {
     window.open('', '_blank');
   };
 
