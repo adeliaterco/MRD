@@ -141,8 +141,8 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
                   </div>
                   <CountdownTimer targetDate={targetDate} />
                   <p className="text-sm text-muted-foreground mt-2">
-                    El precio de <span className="font-bold">$17</span> subirá a{' '}
-                    <span className="line-through">$27</span> en 24 horas.
+                    El precio de <span className="font-bold">$27</span> subirá a{' '}
+                    <span className="line-through">$47</span> en 24 horas.
                   </p>
                   <p className="text-sm font-medium text-warning mt-1">
                     Solo quedan 7 cupos disponibles a este precio.
