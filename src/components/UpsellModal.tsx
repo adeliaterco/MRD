@@ -22,7 +22,7 @@ const UpsellModal = ({ isOpen, onClose }: UpsellModalProps) => {
   };
 
   const handlePurchase = () => {
-    window.open('https://pay.hotmart.com/E105443779U?off=f70zozuc', '_blank');
+    window.open('https://go.centerpag.com/PPU38CQA482', '_blank');
   };
 
   return (
